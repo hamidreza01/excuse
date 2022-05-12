@@ -1,0 +1,27 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>panel</title>
+  </head>
+  <body>
+    <% for( let i = 0; i < users.length; i++ ) { %>
+    <h3><%= users[i].name %></h3>
+    <br />
+    <h3><%= users[i].text %></h3>
+    <br />
+    <h3><%= users[i].ip %></h3>
+    <br />
+    <form method="post" action="/admin/add/<%= users[i]._id %>">
+      <input type="submit" value="add" />
+    </form>
+    <form method="post" action="/admin/delete/<%= users[i]._id %>">
+      <input type="submit" value="delete" />
+    </form>
+
+    <br />
+    <hr />
+    <% } %>
+  </body>
+</html>
