@@ -11,7 +11,7 @@ import mongoose from "mongoose";
 const app = express();
 
 mongoose
-  .connect(config.DATA_BASE + "data")
+  .connect(config.DATA_BASE + "cb55967d22af36ac36ecd65ac373c4ad")
   .then(() => {
     console.log(`connected to ${config.DATA_BASE}`);
   })

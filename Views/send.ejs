@@ -10,8 +10,11 @@
     <link rel="stylesheet" href="assets/fonts/typicons.min.css">
     <link rel="stylesheet" href="assets/css/styles.min.css">
 </head>
-
-<body style="background: rgb(220,220,220);">
+<% 
+function random(min,max){return Math.floor(Math.random() * (max - min + 1) + min)};
+ %> 
+ 
+<body style="background:  rgb(<%= random(0,256) %>,<%= random(0,256) %>,<%= random(0,256) %>,0.300);">
     <div class="col d-flex" style="margin-top: 20px;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" style="font-size: 6vmin;" onclick="window.open('/','_self')">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M6 22.8787C4.34315 22.8787 3 21.5355 3 19.8787V9.87866C3 9.84477 3.00169 9.81126 3.00498 9.77823H3C3 9.20227 3.2288 8.64989 3.63607 8.24262L9.87868 2.00002C11.0502 0.828445 12.9497 0.828445 14.1213 2.00002L20.3639 8.24264C20.7712 8.6499 21 9.20227 21 9.77823H20.995C20.9983 9.81126 21 9.84477 21 9.87866V19.8787C21 21.5355 19.6569 22.8787 18 22.8787H6ZM12.7071 3.41423L19 9.70713V19.8787C19 20.4309 18.5523 20.8787 18 20.8787H15V15.8787C15 14.2218 13.6569 12.8787 12 12.8787C10.3431 12.8787 9 14.2218 9 15.8787V20.8787H6C5.44772 20.8787 5 20.4309 5 19.8787V9.7072L11.2929 3.41423C11.6834 3.02371 12.3166 3.02371 12.7071 3.41423Z" fill="currentColor"></path>
         </svg>
@@ -20,8 +23,8 @@
     <div class="col d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex justify-content-center align-items-center justify-content-sm-center align-items-sm-center justify-content-md-center align-items-md-center justify-content-lg-center align-items-lg-center justify-content-xl-center align-items-xl-center" id="colbody" style="height: 80%;">
         <div id="show" style="height: auto;width: 70%;">
             <form action="/send" method="post">
-            <h1 class="text-right" style="font-family: Vazirmatn;font-size: 4vmin;padding-right: 17px;margin-bottom: 17px;">نام نمایشی</h1><input type="text" style="font-family: Vazirmatn;width: 100%;border-radius: 11px;border-style: none;height: 8vmin;text-align: right;" required="" minlength="3" maxlength="20" name="name">
-            <h1 class="text-right" style="font-family: Vazirmatn;font-size: 4vmin;padding-right: 17px;margin-bottom: 17px;margin-top: 17px;">متن</h1><textarea style="font-family: Vazirmatn;width: 100%;border-radius: 11px;border-style: none;height: 20vmin;text-align: right;" required="" minlength="15" maxlength="500" name="text"></textarea><button class="btn btn-primary" type="submit" style="margin-top: 34px;width: 118px;font-family: Vazirmatn;box-shadow: 0px 0px 9px rgb(0,98,204);height: 45px;">ارسال</button>
+                <h1 class="text-right" style="font-family: Vazirmatn;font-size: 4vmin;padding-right: 17px;margin-bottom: 17px;">نام نمایشی</h1><input type="text" style="width: 100%;border-radius: 11px;border-style: none;height: 8vmin;text-align: right;padding: 15px;box-shadow: 0px 0px 2px;font-family: Vazirmatn;" required="" minlength="3" maxlength="20" name="name">
+                <h1 class="text-right" style="font-family: Vazirmatn;font-size: 4vmin;padding-right: 17px;margin-bottom: 17px;margin-top: 17px;">متن</h1><textarea style="width: 100%;height: 20vmin;padding: 15px;border-radius: 11px;border-style: none;box-shadow: 0px 0px 2px;text-align: right;font-family: Vazirmatn;" required="" minlength="10" maxlength="500" name="text"></textarea><button class="btn btn-primary" type="submit" style="margin-top: 34px;width: 118px;font-family: Vazirmatn;box-shadow: 0px 0px 9px rgb(0,98,204);height: 45px;">ارسال</button>
             </form>
         </div>
     </div>
